@@ -449,13 +449,20 @@ div.tocify {
   t() %&gt;% 
   melt() %&gt;%
   ggplot(aes(x = Var1, y = fct_rev(Var2), fill = value)) + 
-  geom_tile() +
+  geom_tile(color = &quot;black&quot;) +
   labs(x = &quot;&quot;, y = &quot;&quot;, 
        title = &quot;Community composition of simulated community&quot;) + 
   theme(axis.text.x = element_text(angle = 90),
         legend.position = &quot;none&quot;,
-        axis.ticks = element_blank())</code></pre>
-<p><img src="first_rmarkdown_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank()) +
+  scale_x_discrete(label = function (x) str_replace(x, &quot;_&quot;, &quot; &quot;),
+                   expand = c(0, 0)) +
+  scale_y_discrete(label = function (x) str_replace(x, &quot;_&quot;, &quot; &quot;),
+                   expand = c(0, 0))</code></pre>
+<p><img src="first_rmarkdown_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 </div>
 
 <p><br>
