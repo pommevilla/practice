@@ -1,0 +1,23 @@
+name: Persistent Homology in microbial communities
+output_dir: docs
+navbar:
+  title: ''
+  left:
+  - text: About
+    href: index.html
+  - text: Structures
+    href: structures.html
+  - text: Nectar Microbiomes
+    href: nmph.html
+    
+output:
+  html_document:
+    theme: lumen
+    include:
+      after_body: src/footer.html
+    lib_dir: site_libs
+    toc: yes
+    toc_float:
+      smooth_scroll: yes
+      collapsed: no
+    self_contained: no
