@@ -1,3 +1,6 @@
 # Ignore ipynb checkpoints
 .ipynb_checkpoints
 .Rproj.user
+
+# Mac stuff
+.DS_store
